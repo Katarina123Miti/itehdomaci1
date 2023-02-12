@@ -30,8 +30,8 @@
           <!-- sadrzaj modala -->
           <form>
             <div class="form-group">
-              <label for="imeiprezime_osudjenika">Ime i prezime osudjenika:</label>
-              <input type="text" class="form-control" id="imeiprezime_osudjenika" value='' required>
+              <label for="imePrezime_osudjenika">Ime i prezime osudjenika:</label>
+              <input type="text" class="form-control" id="imePrezime_osudjenika" value='' required>
             </div>
             <div class="form-group">
               <label for="sudija">Sudija:</label>
@@ -45,7 +45,7 @@
               </div>
             </fieldset>
             <div class="d-grid gap-2">
-              <a href='./krivicnadelaOsudjenika.php' id='svaKrivicnaDela'><button class="btn btn-warning" style="background-color: #5D7583;" type="button">Sva krivicna dela</button></a>
+              <a href='./krivicnadelaOsudjenika.php' id='svaKrivicnaDela'><button class="btn btn-warning" style="background-color: #5D7583; font-style:italic" type="button">Sva krivicna dela</button></a>
             </div>
           </form>
 
@@ -65,7 +65,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Dodavanje novog krivicnog dela</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Dodavanje novog osudjenika</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -76,7 +76,7 @@
           <form>
             <div class="form-group">
               <label for="imePrezime_osudjenika_dodaj">Ime i prezime osudjenika:</label>
-              <input type="text" class="form-control" id="imeiprezime_osudjenika_dodaj" placeholder="" required>
+              <input type="text" class="form-control" id="imePrezime_osudjenika_dodaj" placeholder="" required>
             </div>
             <div class="form-group">
               <label for="sudija_dodaj">Sudija:</label>
@@ -100,6 +100,7 @@
     </div>
   </div>
   <?php include 'header.php'; ?>
+ 
 
 <!-- SADRZAJ -->
 <div class='centerDiv'>
@@ -113,7 +114,7 @@
       <table class="table">
         <thead class="thead-red" style="background-color: pink;">
           <tr>
-            <th scope="col">ID</th>
+            <th scope="col"></th>
             <th scope="col">Osudjenik</th>
             <th scope="col">Sudija</th>
             <th scope="col">Broj krivicnih dela</th>
@@ -199,7 +200,7 @@
 
     // Dugme za dodavanje
     $('#button_dodaj').click(function (e) {
-      const imePrezime_osudjenika = $('#imePrezime_osudjenika_dodaj').val();
+      const imePrezime = $('#imePrezime_osudjenika_dodaj').val();
       if(imePrezime === "") {
           alert("Morate uneti ime i prezime osudjenika!");
           return false;
@@ -275,7 +276,7 @@
         alert(data.greska);
         return;
       }
-      console.log(data.osudjenik)
+      console.log(data.osudjenici)
       osudjenici = data.osudjenici;
       iscrtajTabelu();
     })

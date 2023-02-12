@@ -1,14 +1,14 @@
 <?php
 
 require "../DBBroker.php";
-require "../Usluga.php";
+require "../osudjenik.php";
 
 $broker=DBBroker::getBroker();
 
-if(isset($_POST['imePrezime']) && isset($_POST['sudija']) && isset($_POST['id'])) {
+if(isset($_POST['imePrezime']) && isset($_POST['sudija']) && isset($_POST['id']) ) {
 
-    $osudjenikkojisemenja = new Usluga($_POST['id'], null, null);
-    $osudjenikkojimsemenja = new Usluga(null,$_POST['imePrezime'],$_POST['sudija']);
+    $osudjenikkojisemenja = new osudjenik($_POST['id'], null, null);
+    $osudjenikkojimsemenja = new osudjenik(null,$_POST['imePrezime'],$_POST['sudija']);
     $rezultat = $osudjenikkojisemenja->update($osudjenikkojimsemenja, $broker);
 
     if(!$rezultat){

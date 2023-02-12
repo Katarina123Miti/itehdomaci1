@@ -28,6 +28,7 @@ USE `kriviccnnadella`;
 --
 -- Table structure for table `krivicnodelo`
 --
+DROP TABLE IF EXISTS `krivicnodelo`; 
 
 CREATE TABLE `krivicnodelo` (
   `id` bigint(20) NOT NULL,
@@ -51,6 +52,7 @@ INSERT INTO `krivicnodelo` (`id`, `osudjenik`, `datum`, `nazivDela`) VALUES
 --
 -- Table structure for table `osudjenik`
 --
+DROP TABLE IF EXISTS `osudjenik`; 
 
 CREATE TABLE `osudjenik` (
   `id` bigint(20) NOT NULL,
@@ -76,6 +78,7 @@ INSERT INTO `osudjenik` (`id`, `imePrezime`, `sudija`) VALUES
 --
 -- Table structure for table `sudija`
 --
+DROP TABLE IF EXISTS `sudija`;
 
 CREATE TABLE `sudija` (
   `id` bigint(20) NOT NULL,

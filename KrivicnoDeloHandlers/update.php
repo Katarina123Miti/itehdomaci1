@@ -5,8 +5,8 @@ require "../krivicnodelo.php";
 
 $broker=DBBroker::getBroker();
 
-if(isset($_POST['osudjenik']) && isset($_POST['nazivDela']) && isset($_POST['datum']) )
- && isset($_POST['id']) {
+if(isset($_POST['osudjenik']) && isset($_POST['nazivDela']) && isset($_POST['datum']) 
+ && isset($_POST['id']) ) {
 
     $krivicnodelopre = new KrivicnoDelo($_POST['id']);
     $krivicnodeloposle = new KrivicnoDelo(null,$_POST['osudjenik'],$_POST['nazivDela'],$_POST['datum']);

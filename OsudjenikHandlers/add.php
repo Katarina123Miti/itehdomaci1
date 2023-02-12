@@ -7,7 +7,7 @@ $broker=DBBroker::getBroker();
 
 if(isset($_POST['imePrezime']) && isset($_POST['sudija'])) {
 
-    $osudjenik = new Osudjenik(1,$_POST['imePrezime'],$_POST['sudija']);
+    $osudjenik = new Osudjenik(null,$_POST['imePrezime'],$_POST['sudija']);
     $rezultat = Osudjenik::add($osudjenik, $broker);
 
     if(!$rezultat){

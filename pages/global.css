@@ -13,11 +13,11 @@
   } */
 
 
-  .centerDiv {
-    width: 99vw !important;
+  .centerDiv { 
+    width: 99vw !important; 
     height: 110vh !important;
     border: 1px solid rgb(243, 238, 238);
-    background-image: url("../img/slika1.png");
+    background-image: url("../img/slika3.avif");
 
 
     background-size: cover;
@@ -51,7 +51,7 @@
   .middle_div {
     grid-column-start: 2;
     grid-column-end: 3;
-    background-color: rgb(235, 13, 13);
+    background-color: rgb(241, 238, 238);
     opacity: 0.9;
     border-left: 5px solid rgb(9, 227, 85)
     border-right: 5px solid rgb(238, 19, 19);
@@ -123,4 +123,10 @@
   .col-3 {
     margin: 20px;
     justify-content: center;
+  }
+
+  li > a {
+    text-decoration: double;
+    color: hotpink;
+
   }
